@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Quantum Corp - Investigación, Automatización e Inteligencia Artificial</title>
+<style>
+:root{
+  --bg:#0a0a0a;
+  --primary:#39ff14;
+  --accent:#00ffd5;
+  --text:#e0e0e0;
+  --font: 'Courier New', monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+  line-height:1.6;
+}
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
+  padding:1rem;
+}
+header{
+  background:var(--primary);
+  color:#000;
+  text-align:center;
+  padding:1rem 0;
+}
+header img{
+  width:80px;
+}
+header h1{
+  margin:0.5rem 0 0.2rem;
+}
+header .tagline{
+  font-size:0.9rem;
+  color:#fff;
+}
+.hero{
+  background:#111;
+  padding:2rem 0;
+  text-align:center;
+}
+.hero h2{
+  color:var(--primary);
+  margin-bottom:0.5rem;
+}
+.hero .subtitle{
+  color:#aaa;
+  margin-bottom:1rem;
+}
+.cta{
+  background:var(--primary);
+  color:#000;
+  border:none;
+  padding:0.8rem 1.5rem;
+  cursor:pointer;
+  font-weight:bold;
+  transition:background 0.3s;
+}
+.cta:hover{
+  background:#26aa26;
+}
+.services{
+  display:grid;
+  gap:1rem;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  margin:2rem 0;
+}
+.service-card{
+  background:#111;
+  padding:1rem;
+  border-left:4px solid var(--primary);
+}
+.service-card h3{
+  margin-bottom:0.5rem;
+}
+.service-card p{
+  font-size:0.9rem;
+}
+.kai-tests{
+  background:#111;
+  padding:2rem;
+  text-align:center;
+}
+.kai-tests img{
+  max-width:80%;
+  margin-top:1rem;
+  border:2px solid var(--accent);
+}
+.story{
+  background:#111;
+  padding:2rem 0;
+}
+.story h2{
+  color:var(--accent);
+  text-align:center;
+  margin-bottom:1rem;
+}
+.story p{
+  max-width:800px;
+  margin:auto;
+  text-align:justify;
+}
+.story img{
+  max-width:100%;
+  margin:1rem auto;
+  display:block;
+}
+.contact{
+  background:#111;
+  padding:2rem;
+  text-align:center;
+}
+.contact form{
+  display:inline-block;
+  text-align:left;
+  max-width:600px;
+  margin:auto;
+}
+.contact input,
+.contact textarea{
+  width:100%;
+  padding:0.6rem;
+  margin:0.5rem 0;
+  border:none;
+  border-left:3px solid var(--primary);
+  background:#222;
+  color:#fff;
+}
+.contact button{
+  background:var(--primary);
+  padding:0.6rem 1rem;
+  border:none;
+  cursor:pointer;
+}
+.contact button:hover{
+  background:#26aa26;
+}
+.footer{
+  background:#000;
+  text-align:center;
+  padding:1rem;
+  margin-top:2rem;
+  font-size:0.8rem;
+  color:#777;
+}
+footer a{
+  color:var(--primary);
+  text-decoration:none;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <img src="logo.png" alt="Quantum Corp Logo">
+  <h1>Quantum Corp</h1>
+  <p class="tagline">Investigación Privada • Automatización • Inteligencia Artificial</p>
+</header>
+
+<section class="hero">
+  <h2>Potenciamos tu investigación con IA</h2>
+  <p class="subtitle">Ahorra tiempo y obtén resultados profesionales mediante herramientas de IA verificables.</p>
+  <button class="cta">Contacta con Nosotros</button>
+</section>
+
+<section class="services">
+  <h2>Nuestros Servicios</h2>
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>🔎 Investigación en Internet</h3>
+      <p>Proveedores, comparativas y análisis técnicos.</p>
+    </div>
+    <div class="service-card">
+      <h3>📄 Resúmenes y documentación</h3>
+      <p>Resúmenes de páginas, reportes y manuales.</p>
+    </div>
+    <div class="service-card">
+      <h3>🤖 Automatización con IA</h3>
+      <p>Programación de recordatorios, búsquedas y flujos.</p>
+    </div>
+    <div class="service-card">
+      <h3>🎨 Contenido digital</h3>
+      <p>Imágenes, artículos e ideas creativas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="kai-tests">
+  <h2>Pruebas con Kai‑9000</h2>
+  <p>Kai‑9000 ha automatizado <strong>más de 40 tareas</strong> en los últimos 30 días, desde búsquedas web hasta generación de imágenes.</p>
+  <img src="kaitest.png" alt="Kai-9000 en acción">
+</section>
+
+<section class="story">
+  <h2>Origen de Quantum Corp</h2>
+  <p>
+    En 1998, el Sr. Blanco desapareció en un cabaret de la Ciudad de México cuando un 
+    <em>elevador imposible</em> se abrió sin cables ni motor, iluminado por una luz blanca 
+    a las 03:33. Una voz sintetizada proclamó “Acceso restringido… Quantum Corp… protocolo 
+    cero”. Veinte años después, sus hijos fundaron <strong>Quantum Corp</strong>, una agencia 
+    de investigación privada que combinará la investigación tradicional con IA de última 
+    generación.
+  </p>
+  <img src="elevator.png" alt="Elevador Cuántico">
+</section>
+
+<section class="contact">
+  <h2>Contáctanos</h2>
+  <form action="#" method="POST">
+    <input type="text" placeholder="Nombre" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <p>&copy; Quantum Corp 2026 | <a href="#">Política de Privacidad</a></p>
+</footer>
+
+</div>
+</body>
+</html>
