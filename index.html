@@ -2,164 +2,20 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Quantum Corp - Agencia de investigación privada con IA. Investigación, automatización e inteligencia artificial.">
+<meta name="keywords" content="investigación privada, IA, automatización, Quantum Corp">
+<meta property="og:title" content="Quantum Corp - Investigación Privada">
+<meta property="og:description" content="Agencia de investigación privada combinando investigación tradicional con IA de última generación.">
+<meta property="og:type" content="website">
 <title>Quantum Corp - Investigación, Automatización e Inteligencia Artificial</title>
-<style>
-:root{
-  --bg:#0a0a0a;
-  --primary:#39ff14;
-  --accent:#00ffd5;
-  --text:#e0e0e0;
-  --font: 'Courier New', monospace;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--font);
-  line-height:1.6;
-}
-.container{
-  width:90%;
-  max-width:1200px;
-  margin:auto;
-  padding:1rem;
-}
-header{
-  background:var(--primary);
-  color:#000;
-  text-align:center;
-  padding:1rem 0;
-}
-header img{
-  width:80px;
-}
-header h1{
-  margin:0.5rem 0 0.2rem;
-}
-header .tagline{
-  font-size:0.9rem;
-  color:#fff;
-}
-.hero{
-  background:#111;
-  padding:2rem 0;
-  text-align:center;
-}
-.hero h2{
-  color:var(--primary);
-  margin-bottom:0.5rem;
-}
-.hero .subtitle{
-  color:#aaa;
-  margin-bottom:1rem;
-}
-.cta{
-  background:var(--primary);
-  color:#000;
-  border:none;
-  padding:0.8rem 1.5rem;
-  cursor:pointer;
-  font-weight:bold;
-  transition:background 0.3s;
-}
-.cta:hover{
-  background:#26aa26;
-}
-.services{
-  display:grid;
-  gap:1rem;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  margin:2rem 0;
-}
-.service-card{
-  background:#111;
-  padding:1rem;
-  border-left:4px solid var(--primary);
-}
-.service-card h3{
-  margin-bottom:0.5rem;
-}
-.service-card p{
-  font-size:0.9rem;
-}
-.kai-tests{
-  background:#111;
-  padding:2rem;
-  text-align:center;
-}
-.kai-tests img{
-  max-width:80%;
-  margin-top:1rem;
-  border:2px solid var(--accent);
-}
-.story{
-  background:#111;
-  padding:2rem 0;
-}
-.story h2{
-  color:var(--accent);
-  text-align:center;
-  margin-bottom:1rem;
-}
-.story p{
-  max-width:800px;
-  margin:auto;
-  text-align:justify;
-}
-.story img{
-  max-width:100%;
-  margin:1rem auto;
-  display:block;
-}
-.contact{
-  background:#111;
-  padding:2rem;
-  text-align:center;
-}
-.contact form{
-  display:inline-block;
-  text-align:left;
-  max-width:600px;
-  margin:auto;
-}
-.contact input,
-.contact textarea{
-  width:100%;
-  padding:0.6rem;
-  margin:0.5rem 0;
-  border:none;
-  border-left:3px solid var(--primary);
-  background:#222;
-  color:#fff;
-}
-.contact button{
-  background:var(--primary);
-  padding:0.6rem 1rem;
-  border:none;
-  cursor:pointer;
-}
-.contact button:hover{
-  background:#26aa26;
-}
-.footer{
-  background:#000;
-  text-align:center;
-  padding:1rem;
-  margin-top:2rem;
-  font-size:0.8rem;
-  color:#777;
-}
-footer a{
-  color:var(--primary);
-  text-decoration:none;
-}
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="container">
 
 <header>
-  <img src="logo.png" alt="Quantum Corp Logo">
+  <img src="assets/logo.jpg" alt="Quantum Corp Logo">
   <h1>Quantum Corp</h1>
   <p class="tagline">Investigación Privada • Automatización • Inteligencia Artificial</p>
 </header>
@@ -167,11 +23,13 @@ footer a{
 <section class="hero">
   <h2>Potenciamos tu investigación con IA</h2>
   <p class="subtitle">Ahorra tiempo y obtén resultados profesionales mediante herramientas de IA verificables.</p>
-  <button class="cta">Contacta con Nosotros</button>
+  <button class="cta" onclick="scrollToContact()">Contacta con Nosotros</button>
 </section>
 
 <section class="services">
-  <h2>Nuestros Servicios</h2>
+  <div class="services-header">
+    <h2>Nuestros Servicios</h2>
+  </div>
   <div class="service-grid">
     <div class="service-card">
       <h3>🔎 Investigación en Internet</h3>
@@ -195,7 +53,7 @@ footer a{
 <section class="kai-tests">
   <h2>Pruebas con Kai‑9000</h2>
   <p>Kai‑9000 ha automatizado <strong>más de 40 tareas</strong> en los últimos 30 días, desde búsquedas web hasta generación de imágenes.</p>
-  <img src="kaitest.png" alt="Kai-9000 en acción">
+  <img src="assets/kaitest.jpg" alt="Kai-9000 en acción">
 </section>
 
 <section class="story">
@@ -203,28 +61,31 @@ footer a{
   <p>
     En 1998, el Sr. Blanco desapareció en un cabaret de la Ciudad de México cuando un 
     <em>elevador imposible</em> se abrió sin cables ni motor, iluminado por una luz blanca 
-    a las 03:33. Una voz sintetizada proclamó “Acceso restringido… Quantum Corp… protocolo 
-    cero”. Veinte años después, sus hijos fundaron <strong>Quantum Corp</strong>, una agencia 
+    a las 03:33. Una voz sintetizada proclamó "Acceso restringido… Quantum Corp… protocolo 
+    cero". Veinte años después, sus hijos fundaron <strong>Quantum Corp</strong>, una agencia 
     de investigación privada que combinará la investigación tradicional con IA de última 
     generación.
   </p>
-  <img src="elevator.png" alt="Elevador Cuántico">
+  <img src="assets/elevator.jpg" alt="Elevador Cuántico">
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
   <h2>Contáctanos</h2>
-  <form action="#" method="POST">
-    <input type="text" placeholder="Nombre" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Mensaje"></textarea>
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Nombre" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <textarea id="message" placeholder="Mensaje" required></textarea>
     <button type="submit">Enviar</button>
   </form>
+  <p id="formMessage"></p>
 </section>
 
 <footer class="footer">
-  <p>&copy; Quantum Corp 2026 | <a href="#">Política de Privacidad</a></p>
+  <p>&copy; Quantum Corp 2026 | <a href="#">Política de Privacidad</a> | <a href="news/">Noticias</a> | <a href="stories/">Historias</a></p>
 </footer>
 
 </div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
