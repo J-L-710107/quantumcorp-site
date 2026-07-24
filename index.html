@@ -86,12 +86,38 @@ Años más tarde nació <strong>Quantum Corp</strong>, una agencia de investigac
 
 <section class="contact" id="contact">
   <h2>Contáctanos</h2>
-  <form id="contactForm">
-    <input type="text" id="name" placeholder="Nombre" required>
-    <input type="email" id="email" placeholder="Email" required>
-    <textarea id="message" placeholder="Mensaje" required></textarea>
+
+  <form id="contactForm" action="https://formspree.io/f/xykrnjpy" method="POST">
+
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Nombre"
+      required>
+
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Email"
+      required>
+
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Mensaje"
+      required></textarea>
+
+    <input
+      type="hidden"
+      name="_subject"
+      value="Nuevo mensaje desde Quantum Corp">
+
     <button type="submit">Enviar</button>
+
   </form>
+
   <p id="formMessage"></p>
 </section>
 
