@@ -47,6 +47,10 @@ h1, h2 {
 }
 
 .cta {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+
   background: var(--primary-neon);
   color: black;
   border: none;
