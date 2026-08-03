@@ -58,8 +58,14 @@ h1, h2 {
   cursor: pointer;
   border-radius: 5px;
   font-weight: bold;
+transition: all 0.3s ease;
 }
-
+.cta:hover {
+    background: var(--accent-cyan);
+    color: #000;
+    box-shadow: 0 0 20px rgba(0,255,213,0.6);
+    transform: translateY(-2px);
+}
 .service-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
