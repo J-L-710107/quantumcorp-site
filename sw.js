@@ -1,4 +1,4 @@
-const CACHE_NAME = "quantumcorp-shell-v1";
+const CACHE_NAME = "quantumcorp-shell-v2";
 const PRECACHE_URLS = [
   "./",
   "./index.html",
@@ -17,6 +17,11 @@ const PRECACHE_URLS = [
   "./assets/elevator.jpeg",
   "./news/",
   "./news/bojun-he-2026.html",
+  "./news/trump-crypto-golfo-2026.html",
+  "./news/binance-incidente-2026.html",
+  "./news/factor-pri-morena-2026.html",
+  "./news/ine-asf-proveedores-2026.html",
+  "./connect/",
   "./stories/",
   "./arcade/",
   "./privacy.html",
