@@ -5,6 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const status = document.getElementById("formMessage");
 
   const params = new URLSearchParams(window.location.search);
+  const leadSource = document.getElementById("leadSource");
+  if (leadSource) {
+    const attribution = [params.get("utm_source"), params.get("utm_medium"), params.get("utm_campaign")].filter(Boolean).join(" / ");
+    leadSource.value = attribution || "sitio_web";
+  }
   if (form && params.get("servicio") === "esim") {
     const message = document.getElementById("message");
     if (message && !message.value.trim()) message.value = "Hola, quiero información sobre la eSIM de Quantum Connect. ¿Pueden revisar la compatibilidad de mi equipo, cobertura, disponibilidad y condiciones?";
