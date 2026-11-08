@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formMessage");
 
+  const params = new URLSearchParams(window.location.search);
+  if (form && params.get("servicio") === "esim") {
+    const message = document.getElementById("message");
+    if (message && !message.value.trim()) message.value = "Hola, quiero información sobre la eSIM de Quantum Connect. ¿Pueden revisar la compatibilidad de mi equipo, cobertura, disponibilidad y condiciones?";
+  }
+
   if (form && status) {
     form.addEventListener("submit", () => {
       status.textContent = "Enviando mensaje…";
