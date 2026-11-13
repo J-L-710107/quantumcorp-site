@@ -4,19 +4,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formMessage");
 
+  // Los parámetros UTM son datos de atribución aportados por el navegador.
+  // Se limitan para evitar valores excesivos; no son una prueba de procedencia.
   const params = new URLSearchParams(window.location.search);
   const leadSource = document.getElementById("leadSource");
   if (leadSource) {
-    const attribution = [params.get("utm_source"), params.get("utm_medium"), params.get("utm_campaign")].filter(Boolean).join(" / ");
+    const clean = (value) => (value || "")
+      .replace(/[\u0000-\u001f\u007f]/g, "")
+      .trim()
+      .slice(0, 80);
+    const attribution = [
+      clean(params.get("utm_source")),
+      clean(params.get("utm_medium")),
+      clean(params.get("utm_campaign"))
+    ].filter(Boolean).join(" / ").slice(0, 240);
     leadSource.value = attribution || "sitio_web";
   }
+
   if (form && params.get("servicio") === "esim") {
     const message = document.getElementById("message");
-    if (message && !message.value.trim()) message.value = "Hola, quiero información sobre la eSIM de Quantum Connect. ¿Pueden revisar la compatibilidad de mi equipo, cobertura, disponibilidad y condiciones?";
+    if (message && !message.value.trim()) {
+      message.value = "Hola, quiero información sobre la eSIM de Quantum Connect. ¿Pueden revisar la compatibilidad de mi equipo, cobertura, disponibilidad y condiciones?";
+    }
   }
 
   if (form && status) {
-    form.addEventListener("submit", () => {
+    form.addEventListener("submit", (event) => {
+      const honeypot = form.querySelector('[name="_gotcha"]');
+      if (honeypot && honeypot.value.trim()) {
+        event.preventDefault();
+        status.textContent = "No fue posible procesar el envío.";
+        return;
+      }
       status.textContent = "Enviando mensaje…";
     });
   }
