@@ -1,4 +1,4 @@
-const CACHE_NAME = "quantumcorp-shell-v2";
+const CACHE_NAME = "quantumcorp-shell-v3";
 const PRECACHE_URLS = [
   "./",
   "./index.html",
@@ -25,7 +25,8 @@ const PRECACHE_URLS = [
   "./stories/",
   "./arcade/",
   "./privacy.html",
-  "./gracias.html"
+  "./gracias.html",
+  "./offline.html"
 ];
 
 self.addEventListener("install", (event) => {
@@ -66,7 +67,8 @@ self.addEventListener("fetch", (event) => {
         })
         .catch(async () => {
           const cached = await caches.match(request);
-          return cached || caches.match("./index.html");
+          if (cached) return cached;
+          return caches.match(new URL("./offline.html", self.registration.scope).href);
         })
     );
     return;
