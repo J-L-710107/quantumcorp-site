@@ -77,17 +77,22 @@
 </section>
 <section class="contact" id="contact">
   <h2>Contacto</h2>
-  <p>Para consultas sobre eSIM, investigación digital o propuestas de colaboración, utiliza el formulario. No envíes contraseñas, datos financieros ni información personal sensible.</p>
+  <p>Para consultas sobre eSIM, investigación digital o propuestas de colaboración, utiliza el formulario. No envíes contraseñas, datos financieros, documentos de identidad ni información personal sensible.</p>
   <form id="contactForm" action="https://formspree.io/f/xykrnjpy" method="POST">
-    <label for="name">Nombre</label><input type="text" id="name" name="name" autocomplete="name" required>
-    <label for="email">Correo electrónico</label><input type="email" id="email" name="email" autocomplete="email" required>
-    <label for="message">Mensaje</label><textarea id="message" name="message" rows="5" required></textarea>
+    <label for="name">Nombre</label><input type="text" id="name" name="name" autocomplete="name" maxlength="80" required>
+    <label for="email">Correo electrónico</label><input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
+    <label for="message">Mensaje</label><textarea id="message" name="message" rows="5" minlength="5" maxlength="2000" required></textarea>
     <input type="hidden" name="_subject" value="Nuevo mensaje desde Quantum Corp">
     <input type="hidden" id="leadSource" name="lead_source" value="sitio_web">
     <input type="hidden" name="_next" value="https://j-l-710107.github.io/quantumcorp-site/gracias.html">
+    <div aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+      <label for="website">Deja este campo vacío</label>
+      <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+    </div>
     <button type="submit">Enviar mensaje</button>
     <p id="formMessage" role="status" aria-live="polite"></p>
   </form>
+  <p class="small-note">Al enviar el formulario, la información se transmite a Formspree para gestionar el mensaje. Consulta el <a href="privacy.html">aviso de privacidad</a> antes de continuar.</p>
 </section>
 </main>
 <footer class="footer">
