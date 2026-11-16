@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Principios de seguridad de la información, confidencialidad y respuesta a incidentes de Quantum Corp.">
+<meta name="theme-color" content="#0a0a0a">
+<title>Seguridad y respuesta a incidentes | Quantum Corp</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+<div class="container">
+<header class="site-header"><h1>Seguridad de la información</h1><p class="tagline">Quantum Corp · Confidencialidad · Prevención · Respuesta</p></header>
+<main id="main-content" class="article-body">
+<div class="notice"><strong>Política operativa inicial.</strong> Este documento establece criterios mínimos para el proyecto digital Quantum Corp. No certifica que todos los controles descritos estén activados ni constituye una auditoría independiente. Los controles pendientes se identifican expresamente y deben verificarse antes de afirmar su implementación.</div>
+<h2>1. Objetivo y alcance</h2>
+<p>Proteger la información personal y de trabajo que se encuentre bajo control de Quantum Corp, reducir accesos no autorizados y establecer una respuesta ordenada ante incidentes. Aplica al sitio web estático, al repositorio de código, al formulario de contacto y a las cuentas de correo y servicios que se utilicen para operar el proyecto.</p>
+<h2>2. Sistemas y proveedores identificados</h2>
+<ul>
+<li><strong>GitHub y GitHub Pages:</strong> repositorio y publicación del sitio web. El repositorio es público; por tanto, todo archivo publicado debe tratarse como información accesible a cualquiera.</li>
+<li><strong>Formspree:</strong> recepción y gestión de mensajes enviados desde el formulario.</li>
+<li><strong>Proton Mail:</strong> canal de contacto y privacidad declarado en el aviso.</li>
+<li><strong>PayPal:</strong> no está integrado en el sitio web ni se ofrece actualmente un flujo de pago desde la página. Cualquier uso futuro deberá evaluarse antes de habilitarlo.</li>
+</ul>
+<p>La lista debe actualizarse si se añaden aplicaciones, colaboradores, herramientas de analítica, almacenamiento o proveedores.</p>
+<h2>3. Clasificación de la información</h2>
+<ul>
+<li><strong>Pública:</strong> contenido aprobado para el sitio, publicaciones y datos institucionales destinados a difusión.</li>
+<li><strong>Interna:</strong> borradores, procedimientos, notas de trabajo y planificación que no estén aprobados para publicación.</li>
+<li><strong>Confidencial:</strong> comunicaciones de clientes, propuestas, documentos de trabajo no públicos y datos personales recibidos.</li>
+<li><strong>Restringida:</strong> contraseñas, códigos de recuperación, tokens, claves API, credenciales financieras y cualquier dato sensible. No deben almacenarse en el repositorio público ni enviarse por el formulario.</li>
+</ul>
+<h2>4. Acceso y autenticación</h2>
+<ul>
+<li>Usar cuentas individuales y contraseñas únicas, largas y no reutilizadas.</li>
+<li>Activar autenticación multifactor (MFA/2FA) en GitHub, Proton Mail, Formspree y cualquier cuenta que permita administrar datos o publicar cambios.</li>
+<li>Guardar códigos de recuperación en un lugar separado y protegido; nunca dentro del repositorio.</li>
+<li>Conceder solo los permisos necesarios y revisar periódicamente colaboradores, sesiones y aplicaciones autorizadas.</li>
+<li>Bloquear los dispositivos cuando no se utilicen y mantener sistema operativo, navegador y aplicaciones actualizados.</li>
+</ul>
+<h2>5. Reglas para el repositorio y la publicación</h2>
+<ul>
+<li>No introducir contraseñas, tokens, claves API, códigos de recuperación, datos de clientes ni expedientes privados en el repositorio.</li>
+<li>Revisar los cambios antes de publicarlos y comprobar que no incluyan datos personales o secretos en archivos, imágenes, metadatos o historial de commits.</li>
+<li>Activar, cuando esté disponible, la detección de secretos y alertas de seguridad del repositorio.</li>
+<li>Limitar la escritura del repositorio a personas autorizadas. Considerar protección de la rama principal y revisión de cambios antes de integrarlos.</li>
+<li>Si un secreto se publica por error, eliminarlo del archivo no basta: debe revocarse o rotarse de inmediato y evaluarse la limpieza del historial.</li>
+</ul>
+<h2>6. Formularios y comunicaciones</h2>
+<ul>
+<li>Solicitar únicamente los datos necesarios para atender la consulta.</li>
+<li>No pedir información sensible, contraseñas, documentos de identidad ni datos de tarjetas mediante el formulario público.</li>
+<li>Revisar periódicamente la configuración, accesos y opciones antispam del proveedor del formulario.</li>
+<li>No reenviar comunicaciones confidenciales a destinatarios no autorizados. Verificar destinatario y adjuntos antes de enviar.</li>
+<li>Eliminar o bloquear mensajes cuando dejen de ser necesarios, salvo obligación legal de conservación.</li>
+</ul>
+<h2>7. Almacenamiento y respaldos</h2>
+<p>Conservar solo la información necesaria. Los respaldos que contengan información confidencial deben estar protegidos mediante cifrado y acceso limitado. Evitar copias innecesarias en dispositivos compartidos, servicios personales o repositorios públicos. Probar periódicamente que los respaldos útiles puedan recuperarse y eliminar de forma segura las copias que ya no se necesiten.</p>
+<h2>8. Confidencialidad y proveedores</h2>
+<p>La información recibida para atender una consulta se utilizará únicamente para las finalidades informadas. Antes de incorporar un nuevo proveedor se revisarán sus funciones, condiciones, política de privacidad, medidas de seguridad, ubicación o transferencias de datos cuando corresponda, y mecanismos para atender solicitudes o incidentes. No se presumirá que un proveedor tiene una función contractual específica sin revisar sus términos o acuerdo aplicable.</p>
+<h2>9. Respuesta a incidentes</h2>
+<ol>
+<li><strong>Detectar y registrar:</strong> anotar fecha, hora, sistema afectado, señales observadas y persona que detectó el evento.</li>
+<li><strong>Contener:</strong> limitar accesos, desconectar el elemento comprometido si es necesario, revocar sesiones y tokens, y cambiar credenciales desde un dispositivo confiable.</li>
+<li><strong>Preservar evidencia:</strong> guardar registros y capturas pertinentes de forma privada, sin publicar datos personales ni alterar innecesariamente la evidencia.</li>
+<li><strong>Evaluar:</strong> identificar qué información pudo verse afectada, cuántas personas podrían estar involucradas, qué proveedores participaron y qué consecuencias pueden derivarse.</li>
+<li><strong>Notificar cuando corresponda:</strong> si una vulneración afecta de forma significativa los derechos patrimoniales o morales de las personas titulares, informarles de inmediato conforme a la legislación aplicable y explicar medidas de protección recomendadas.</li>
+<li><strong>Corregir y cerrar:</strong> eliminar la causa, documentar las medidas adoptadas, revisar si las credenciales deben rotarse y actualizar este procedimiento para evitar recurrencias.</li>
+</ol>
+<p>Los incidentes y las decisiones de respuesta deben conservarse en un registro interno de acceso restringido. No se publicarán detalles que faciliten nuevos ataques o expongan a las personas afectadas.</p>
+<h2>10. Revisión y mejora</h2>
+<p>Esta política debe revisarse al menos cada seis meses y cada vez que se añada un proveedor, se modifique el formulario, se habiliten pagos o se detecte un incidente relevante. Las medidas deben ajustarse al tamaño, tipo de información y riesgos reales del proyecto.</p>
+<h2>11. Controles pendientes de verificación</h2>
+<p>Antes de declarar estos controles como implementados, el responsable debe comprobar y documentar:</p>
+<ul>
+<li>Estado de MFA/2FA y métodos de recuperación en GitHub, Proton Mail y Formspree.</li>
+<li>Lista de colaboradores, permisos, sesiones y aplicaciones con acceso.</li>
+<li>Detección de secretos, alertas de seguridad y protección de la rama principal en GitHub.</li>
+<li>Configuración antispam, retención y eliminación de mensajes en Formspree.</li>
+<li>Existencia, cifrado, acceso y prueba de recuperación de respaldos.</li>
+<li>Revisión del historial del repositorio para descartar secretos o datos privados publicados anteriormente.</li>
+</ul>
+<p><strong>Última actualización:</strong> 16 de noviembre de 2026.</p>
+<p><a href="privacy.html">Consultar aviso de privacidad</a> · <a href="index.html">← Volver a Quantum Corp</a></p>
+</main>
+<footer class="footer">© Quantum Corp 2026 · <a href="privacy.html">Privacidad</a></footer>
+</div>
+</body>
+</html>
