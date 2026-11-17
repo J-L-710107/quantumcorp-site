@@ -28,7 +28,9 @@ const PRECACHE_URLS = [
   "./seguridad.html",
   "./condiciones.html",
   "./gracias.html",
-  "./offline.html"
+  "./offline.html",
+  "./robots.txt",
+  "./sitemap.xml"
 ];
 
 self.addEventListener("install", (event) => {
