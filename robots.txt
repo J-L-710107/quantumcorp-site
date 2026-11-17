@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://j-l-710107.github.io/quantumcorp-site/sitemap.xml
