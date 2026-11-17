@@ -1,4 +1,4 @@
-const CACHE_NAME = "quantumcorp-shell-v3";
+const CACHE_NAME = "quantumcorp-shell-v4";
 const PRECACHE_URLS = [
   "./",
   "./index.html",
@@ -25,6 +25,8 @@ const PRECACHE_URLS = [
   "./stories/",
   "./arcade/",
   "./privacy.html",
+  "./seguridad.html",
+  "./condiciones.html",
   "./gracias.html",
   "./offline.html"
 ];
